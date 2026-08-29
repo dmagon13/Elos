@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade - Elos Memory</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        h1 { color: #6C63FF; border-bottom: 3px solid #6C63FF; padding-bottom: 10px; }
+        h2 { color: #6C63FF; margin-top: 30px; }
+        h3 { color: #555; }
+        .warning { background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0; border-radius: 4px; }
+        .info { background-color: #e7f3ff; border-left: 4px solid #2196F3; padding: 15px; margin: 20px 0; border-radius: 4px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        table th, table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        table th { background-color: #f0f0f0; font-weight: bold; }
+        ul { margin: 10px 0; padding-left: 20px; }
+        li { margin: 5px 0; }
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; color: #666; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <h1>🔐 Política de Privacidade — Elos Memory</h1>
+    
+    <p><strong>Última atualização:</strong> Setembro de 2026</p>
+    <p><strong>Desenvolvedor:</strong> MagonTech</p>
+    <p><strong>App:</strong> Elos Memory (com.magontech.elos_memory)</p>
+
+    <div class="info">
+        <strong>Resumo:</strong> Elos Memory é um app de diário pessoal criptografado. Seus dados são seus — não vendemos, não rastreamos, não compartilhamos com publicidade. Esta política explica como protegemos suas memórias e que escolhas você tem.
+    </div>
+
+    ---
+
+    <h2>1. O Que Coletamos</h2>
+
+    <h3>Dados que você fornece:</h3>
+    <ul>
+        <li><strong>Nome e email:</strong> Para criar sua conta e recuperação de senha</li>
+        <li><strong>Memórias (texto):</strong> Tudo que você escreve sobre suas memórias</li>
+        <li><strong>Áudio:</strong> Gravações de voz que você faz para memórias</li>
+        <li><strong>Fotos:</strong> Imagens que você anexa às memórias</li>
+        <li><strong>Categorias:</strong> Labels que você cria para organizar memórias (ex: Família, Trabalho)</li>
+        <li><strong>Código de recuperação:</strong> Token único gerado para permitir acesso em novo dispositivo</li>
+        <li><strong>Informações do perfil:</strong> Data de nascimento (opcional), objetivo pessoal (opcional)</li>
+    </ul>
+
+    <h3>Dados coletados automaticamente:</h3>
+    <ul>
+        <li><strong>Atividade:</strong> Que horas você costuma usar o app (para notificações no melhor horário)</li>
+        <li><strong>Estatísticas de uso:</strong> Quantas memórias criou, última data ativa</li>
+        <li><strong>Device ID:</strong> Identificador do seu aparelho (para sincronização)</li>
+        <li><strong>Informações de compra:</strong> Se você assinou o plano premium</li>
+    </ul>
+
+    <p><strong>Não coletamos:</strong> Localização, contatos, fotos da galeria, histórico de navegação, dados de saúde.</p>
+
+    ---
+
+    <h2>2. Como Usamos Seus Dados</h2>
+
+    <table>
+        <tr>
+            <th>Dado</th>
+            <th>Propósito</th>
+            <th>Obrigatório?</th>
+        </tr>
+        <tr>
+            <td>Email e senha</td>
+            <td>Autenticação, recuperação de conta, notificações</td>
+            <td>Sim</td>
+        </tr>
+        <tr>
+            <td>Memórias (texto, áudio, fotos)</td>
+            <td>Armazenar, exibir, buscar suas memórias</td>
+            <td>Sim</td>
+        </tr>
+        <tr>
+            <td>Chat IA (conteúdo enviado)</td>
+            <td>Gerar respostas personalizadas via OpenAI</td>
+            <td>Opcional</td>
+        </tr>
+        <tr>
+            <td>Categorias</td>
+            <td>Filtrar e organizar memórias</td>
+            <td>Opcional</td>
+        </tr>
+        <tr>
+            <td>Atividade (horas/dias)</td>
+            <td>Calcular melhor hora para notificações diárias</td>
+            <td>Automático</td>
+        </tr>
+        <tr>
+            <td>Device ID</td>
+            <td>Identificar seu aparelho, notificações push</td>
+            <td>Automático</td>
+        </tr>
+        <tr>
+            <td>Informação de compra (plano premium)</td>
+            <td>Aplicar limites do plano, permitir features premium</td>
+            <td>Se assinar</td>
+        </tr>
+    </table>
+
+    ---
+
+    <h2>3. 🔐 Criptografia e Segurança</h2>
+
+    <h3>Seus dados estão protegidos por:</h3>
+
+    <ul>
+        <li><strong>Criptografia end-to-end (E2EE):</strong> Seu texto, fotos e áudios são criptografados no seu dispositivo com sua chave privada pessoal <strong>antes</strong> de serem enviados ao servidor. Nem a MagonTech nem o Supabase conseguem ler.</li>
+        <li><strong>X25519 + AES-256-GCM:</strong> Algoritmos de criptografia modernos e auditados.</li>
+        <li><strong>Chave privada no dispositivo:</strong> Sua chave privada NUNCA é enviada ao servidor — fica apenas no seu celular, protegida pelo sistema de segurança do aparelho (Keychain no iOS, EncryptedSharedPreferences no Android).</li>
+        <li><strong>HTTPS/TLS:</strong> Toda comunicação com o servidor é encriptada em trânsito.</li>
+        <li><strong>Buckets privados:</strong> Fotos e áudios são armazenados em storage privado, acessível apenas por você.</li>
+    </ul>
+
+    <h3>Exemplo:</h3>
+    <pre>
+Você escreve: "Hoje passei no exame de Matemática 🎉"
+                        ↓
+        [Criptografado com sua chave privada]
+                        ↓
+    Servidor recebe: (dados ilegíveis)
+                        ↓
+Você abre no app: [Descriptografado automaticamente]
+    Resultado: "Hoje passei no exame de Matemática 🎉" ✅
+    </pre>
+
+    ---
+
+    <h2>4. ⚠️ Decisões de Segurança Transparentes</h2>
+
+    <h3>Backup da Chave Privada (Recuperação em Novo Aparelho)</h3>
+
+    <div class="warning">
+        <strong>⚠️ Transparência Importante:</strong><br><br>
+        Para permitir que você recupere suas memórias em um novo celular <strong>sem perder tudo</strong>, mantemos um backup criptografado da sua chave privada no servidor Supabase.
+        <br><br>
+        <strong>Como funciona:</strong>
+        <ul>
+            <li>Seu backup é protegido por sua <strong>senha</strong> (derivada com PBKDF2-SHA256, 100.000 iterações)</li>
+            <li>Também é protegido por um <strong>código de recuperação</strong> único (160 bits de entropia, completamente independente da senha)</li>
+        </ul>
+
+        <strong>Risco teórico:</strong> Se o servidor Supabase fosse hackeado, um atacante poderia potencialmente acessar este backup e descriptografar suas memórias antigas (anteriores à implementação do código de recuperação). Isso anularia a E2EE na prática.
+        <br><br>
+        <strong>Mitigação:</strong>
+        <ul>
+            <li>✅ Use um código de recuperação (será exibido uma vez no seu primeiro acesso)</li>
+            <li>✅ Guarde-o em local seguro: Password Manager, cofre, etc.</li>
+            <li>✅ Supabase usa segurança enterprise (SOC 2 Type II, DDoS protection, etc.)</li>
+        </ul>
+
+        <strong>Alternativa:</strong> Se não quiser correr esse risco, você pode anotar a chave privada manualmente (opção "Começar do zero" na recuperação) — mas aí você depende de você mesmo (não há backup).
+    </div>
+
+    <h3>Chat IA — Dados Enviados a OpenAI</h3>
+
+    <div class="warning">
+        <strong>⚠️ Importante:</strong><br><br>
+        Ao usar a função <strong>"Perguntar"</strong> (chat IA), o conteúdo das suas memórias é enviado <strong>descriptografado</strong> à API da OpenAI.
+        <br><br>
+        <strong>Por quê?</strong> O servidor (Supabase) nunca acessa o plaintext, então o app descriptografa localmente, envia o texto à OpenAI, e recebe a resposta.
+        <br><br>
+        <strong>O que a OpenAI faz com seus dados?</strong>
+        <ul>
+            <li>Processa sua pergunta + contexto das memórias</li>
+            <li>Gera uma resposta personalizada</li>
+            <li>Conforme a <a href="https://openai.com/privacy" target="_blank">Política de Privacidade do OpenAI</a>, eles <strong>não</strong> usam seus dados para treinar modelos por padrão (você pode optar por compartilhamento adicional)</li>
+        </ul>
+
+        <strong>Recomendação:</strong> Não use o chat IA com memórias muito sensíveis se prefere máxima privacidade. Para tudo mais, está seguro.
+    </div>
+
+    <h3>Áudio e Transcrição (Whisper)</h3>
+
+    <ul>
+        <li>Quando você grava um áudio, ele é enviado à API Whisper da OpenAI para transcrição</li>
+        <li>O áudio é processado em HTTPS, mas não está coberto por E2EE (OpenAI acessa plaintext)</li>
+        <li>Conforme a política do OpenAI, áudios não são retidos após transcrição</li>
+    </ul>
+
+    ---
+
+    <h2>5. Com Quem Compartilhamos Dados</h2>
+
+    <h3>Terceiros que recebem seus dados:</h3>
+
+    <table>
+        <tr>
+            <th>Serviço</th>
+            <th>O Que Recebem</th>
+            <th>Propósito</th>
+            <th>Política</th>
+        </tr>
+        <tr>
+            <td><strong>Supabase</strong> (database + storage)</td>
+            <td>Dados criptografados (você não consegue ler)</td>
+            <td>Armazenar memórias</td>
+            <td><a href="https://supabase.com/privacy" target="_blank">Supabase Privacy</a></td>
+        </tr>
+        <tr>
+            <td><strong>OpenAI</strong> (Chat + Whisper)</td>
+            <td>Texto descriptografado, áudio bruto</td>
+            <td>Gerar respostas, transcrever áudio</td>
+            <td><a href="https://openai.com/privacy" target="_blank">OpenAI Privacy</a></td>
+        </tr>
+        <tr>
+            <td><strong>RevenueCat</strong> (pagamentos)</td>
+            <td>Status de compra, Device ID</td>
+            <td>Gerenciar assinatura premium</td>
+            <td><a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy</a></td>
+        </tr>
+        <tr>
+            <td><strong>Google Play Services</strong></td>
+            <td>Device ID, notificações</td>
+            <td>Notificações push, analytics</td>
+            <td><a href="https://policies.google.com/privacy" target="_blank">Google Privacy</a></td>
+        </tr>
+    </table>
+
+    <h3>O Que NÃO Compartilhamos:</h3>
+    <ul>
+        <li>❌ Sua chave privada (NUNCA sai do seu dispositivo)</li>
+        <li>❌ Dados descriptografados com publicidades</li>
+        <li>❌ Informações de contatos ou agenda</li>
+        <li>❌ Dados com brokers de dados ou vendedores de leads</li>
+    </ul>
+
+    ---
+
+    <h2>6. Código de Recuperação</h2>
+
+    <p>Ao criar sua conta ou fazer seu primeiro login, você receberá um <strong>código de recuperação</strong> (32 caracteres em Base32).</p>
+
+    <h3>O que é?</h3>
+    <ul>
+        <li>Uma chave de 160 bits de entropia (segura!)</li>
+        <li>Cifrada independentemente da sua senha</li>
+        <li>Permite recuperar sua conta mesmo que esqueça a senha</li>
+    </ul>
+
+    <h3>O que fazer:</h3>
+    <ul>
+        <li>✅ <strong>Copie e guarde</strong> em um Password Manager (1Password, Bitwarden, etc.)</li>
+        <li>✅ Ou escreva em um papel e guarde em cofre</li>
+        <li>❌ NÃO deixe no seu celular (se o celular for perdido junto com o código, não adianta)</li>
+        <li>❌ NÃO compartilhe com ninguém</li>
+    </ul>
+
+    <p><strong>Se você perdeu:</strong> Acesse a tela de recuperação → "Tenho um código de recuperação" → use-o. Se perdeu o código E a senha, você pode "Começar do zero" (apagará as memórias antigas), mas poderá criar uma nova conta.</p>
+
+    ---
+
+    <h2>7. Mídia Legada (Fotos/Áudios Antigos)</h2>
+
+    <div class="info">
+        <strong>ℹ️ Informação Técnica:</strong><br><br>
+        Memórias criadas antes de <strong>agosto de 2024</strong> podem ter fotos/áudios armazenados em plaintext (não cifrados).
+        <br><br>
+        Essas mídias agora estão protegidas por:
+        <ul>
+            <li>✅ Buckets privados do Supabase (acesso restrito a você)</li>
+            <li>✅ Criptografia automática em background (acontece silenciosamente ao abrir o app)</li>
+        </ul>
+        Se notar uma pausa na primeira vez que abre "Acervo", isso é o processo de cifragem de mídia legada.
+    </div>
+
+    ---
+
+    <h2>8. Seus Direitos (GDPR, CCPA, LGPD)</h2>
+
+    <h3>Você tem o direito de:</h3>
+
+    <ul>
+        <li><strong>✅ Acessar seus dados:</strong> Todos os seus dados são acessíveis dentro do app. Se quiser um export, entre em contato.</li>
+        <li><strong>✅ Excluir seus dados:</strong> Ao excluir sua conta (Perfil → Excluir conta), removemos:
+            <ul>
+                <li>Todas as suas memórias</li>
+                <li>Fotos e áudios anexados</li>
+                <li>Informações de perfil</li>
+                <li>Histórico de atividade</li>
+            </ul>
+            Isso leva até 30 dias para ser completamente removido do servidor (retenção padrão Supabase).
+        </li>
+        <li><strong>✅ Portabilidade:</strong> Se quiser seus dados em outro formato, entre em contato.</li>
+        <li><strong>✅ Revogar consentimento:</strong> Você pode a qualquer momento:
+            <ul>
+                <li>Desativar notificações (Configurações → Notificações)</li>
+                <li>Cancelar assinatura premium</li>
+                <li>Excluir sua conta</li>
+            </ul>
+        </li>
+    </ul>
+
+    ---
+
+    <h2>9. Proteção de Crianças</h2>
+
+    <p>Elos Memory <strong>não é direcionado para crianças menores de 13 anos</strong>. Não coletamos dados de crianças intencionalmente.</p>
+
+    <p>Se você é responsável por uma criança e acha que uma conta foi criada sem consentimento, entre em contato para remover.</p>
+
+    ---
+
+    <h2>10. Retenção de Dados</h2>
+
+    <ul>
+        <li><strong>Suas memórias:</strong> Armazenadas enquanto você mantiver a conta</li>
+        <li><strong>Backup da chave privada:</strong> Armazenado enquanto você mantiver a conta</li>
+        <li><strong>Atividade/logs:</strong> Mantidos por 30 dias</li>
+        <li><strong>Dados após deleção:</strong> Até 30 dias (retenção padrão Supabase)</li>
+    </ul>
+
+    <p>Após exclusão de conta, seus dados são permanentemente removidos do nosso controle.</p>
+
+    ---
+
+    <h2>11. Mudanças Nesta Política</h2>
+
+    <p>Podemos atualizar esta política de privacidade. Notificaremos você de mudanças importantes via email ou no app. Mudanças pequenas (correções, esclarecimentos) podem ser atualizadas sem aviso.</p>
+
+    <p><strong>Última atualização:</strong> Setembro de 2026</p>
+
+    ---
+
+    <h2>12. Contato</h2>
+
+    <p>Dúvidas sobre privacidade? Entre em contato:</p>
+
+    <ul>
+        <li><strong>Email:</strong> <a href="mailto:elos.memorias@gmail.com">elos.memorias@gmail.com</a></li>
+    </ul>
+
+    <p>Responderemos em até 7 dias úteis.</p>
+
+    ---
+
+    <div class="footer">
+        <p><strong>MagonTech — Desenvolvedor do Elos Memory</strong></p>
+        <p>Elos Memory é um produto desenvolvido com foco em privacidade e segurança. Seus dados são seus.</p>
+        <p style="margin-top: 20px;"><em>Última atualização: Setembro de 2026</em></p>
+    </div>
+
+</body>
+</html>

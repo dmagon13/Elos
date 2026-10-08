@@ -17,6 +17,7 @@
         h1 { color: #6C63FF; border-bottom: 3px solid #6C63FF; padding-bottom: 10px; }
         h2 { color: #6C63FF; margin-top: 30px; }
         h3 { color: #555; }
+        hr { border: none; border-top: 1px solid #ddd; margin: 30px 0; }
         .warning { background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0; border-radius: 4px; }
         .info { background-color: #e7f3ff; border-left: 4px solid #2196F3; padding: 15px; margin: 20px 0; border-radius: 4px; }
         table { width: 100%; border-collapse: collapse; margin: 20px 0; }
@@ -28,17 +29,17 @@
     </style>
 </head>
 <body>
-    <h1>🔐 Política de Privacidade — Elos Memory</h1>
-    
-    <p><strong>Última atualização:</strong> Setembro de 2026</p>
+    <h1>🔐 Política de Privacidade - Elos Memory</h1>
+
+    <p><strong>Última atualização:</strong> Outubro de 2026</p>
     <p><strong>Desenvolvedor:</strong> MagonTech</p>
     <p><strong>App:</strong> Elos Memory (com.magontech.elos_memory)</p>
 
     <div class="info">
-        <strong>Resumo:</strong> Elos Memory é um app de diário pessoal criptografado. Seus dados são seus — não vendemos, não rastreamos, não compartilhamos com publicidade. Esta política explica como protegemos suas memórias e que escolhas você tem.
+        <strong>Resumo:</strong> Elos Memory é um app de diário pessoal criptografado. Seus dados são seus: não vendemos, não usamos publicidade e não compartilhamos com anunciantes. Coletamos apenas métricas técnicas e de uso, sem nenhum conteúdo pessoal, para melhorar o app, e você pode desativá-las a qualquer momento em Menu → Privacidade. Esta política explica como protegemos suas memórias e que escolhas você tem.
     </div>
 
-    ---
+    <hr>
 
     <h2>1. O Que Coletamos</h2>
 
@@ -50,7 +51,7 @@
         <li><strong>Fotos:</strong> Imagens que você anexa às memórias</li>
         <li><strong>Categorias:</strong> Labels que você cria para organizar memórias (ex: Família, Trabalho)</li>
         <li><strong>Código de recuperação:</strong> Token único gerado para permitir acesso em novo dispositivo</li>
-        <li><strong>Informações do perfil:</strong> Data de nascimento (opcional), objetivo pessoal (opcional)</li>
+        <li><strong>Informações do perfil:</strong> Data de nascimento (opcional), objetivo pessoal (opcional), como conheceu o app (opcional)</li>
     </ul>
 
     <h3>Dados coletados automaticamente:</h3>
@@ -59,11 +60,13 @@
         <li><strong>Estatísticas de uso:</strong> Quantas memórias criou, última data ativa</li>
         <li><strong>Device ID:</strong> Identificador do seu aparelho (para sincronização)</li>
         <li><strong>Informações de compra:</strong> Se você assinou o plano premium</li>
+        <li><strong>Análise de uso (Firebase Analytics):</strong> Quais recursos do app são usados (por exemplo, "memória criada"), sem conteúdo pessoal. Detalhes na seção 4.</li>
+        <li><strong>Relatórios de falha (Firebase Crashlytics):</strong> Dados técnicos de erros do app, como tipo do erro, modelo do aparelho e versão do Android. Detalhes na seção 4.</li>
     </ul>
 
-    <p><strong>Não coletamos:</strong> Localização, contatos, fotos da galeria, histórico de navegação, dados de saúde.</p>
+    <p><strong>Não coletamos:</strong> Localização, contatos, fotos da galeria, histórico de navegação, dados de saúde, ID de publicidade.</p>
 
-    ---
+    <hr>
 
     <h2>2. Como Usamos Seus Dados</h2>
 
@@ -100,7 +103,7 @@
         </tr>
         <tr>
             <td>Device ID</td>
-            <td>Identificar seu aparelho, notificações push</td>
+            <td>Identificar seu aparelho para sincronização</td>
             <td>Automático</td>
         </tr>
         <tr>
@@ -108,9 +111,14 @@
             <td>Aplicar limites do plano, permitir features premium</td>
             <td>Se assinar</td>
         </tr>
+        <tr>
+            <td>Análise de uso e relatórios de falha</td>
+            <td>Entender quais recursos são usados e corrigir erros, para melhorar o app</td>
+            <td>Opcional (pode ser desativado)</td>
+        </tr>
     </table>
 
-    ---
+    <hr>
 
     <h2>3. 🔐 Criptografia e Segurança</h2>
 
@@ -119,7 +127,7 @@
     <ul>
         <li><strong>Criptografia end-to-end (E2EE):</strong> Seu texto, fotos e áudios são criptografados no seu dispositivo com sua chave privada pessoal <strong>antes</strong> de serem enviados ao servidor. Nem a MagonTech nem o Supabase conseguem ler.</li>
         <li><strong>X25519 + AES-256-GCM:</strong> Algoritmos de criptografia modernos e auditados.</li>
-        <li><strong>Chave privada no dispositivo:</strong> Sua chave privada NUNCA é enviada ao servidor — fica apenas no seu celular, protegida pelo sistema de segurança do aparelho (Keychain no iOS, EncryptedSharedPreferences no Android).</li>
+        <li><strong>Chave privada no dispositivo:</strong> Sua chave privada NUNCA é enviada ao servidor em texto aberto. Ela fica no seu celular, protegida pelo sistema de segurança do aparelho (Keychain no iOS, EncryptedSharedPreferences no Android).</li>
         <li><strong>HTTPS/TLS:</strong> Toda comunicação com o servidor é encriptada em trânsito.</li>
         <li><strong>Buckets privados:</strong> Fotos e áudios são armazenados em storage privado, acessível apenas por você.</li>
     </ul>
@@ -136,7 +144,7 @@ Você abre no app: [Descriptografado automaticamente]
     Resultado: "Hoje passei no exame de Matemática 🎉" ✅
     </pre>
 
-    ---
+    <hr>
 
     <h2>4. ⚠️ Decisões de Segurança Transparentes</h2>
 
@@ -161,10 +169,10 @@ Você abre no app: [Descriptografado automaticamente]
             <li>✅ Supabase usa segurança enterprise (SOC 2 Type II, DDoS protection, etc.)</li>
         </ul>
 
-        <strong>Alternativa:</strong> Se não quiser correr esse risco, você pode anotar a chave privada manualmente (opção "Começar do zero" na recuperação) — mas aí você depende de você mesmo (não há backup).
+        <strong>Alternativa:</strong> Se não quiser correr esse risco, você pode anotar a chave privada manualmente (opção "Começar do zero" na recuperação), mas aí você depende de você mesmo (não há backup).
     </div>
 
-    <h3>Chat IA — Dados Enviados a OpenAI</h3>
+    <h3>Chat IA: Dados Enviados a OpenAI</h3>
 
     <div class="warning">
         <strong>⚠️ Importante:</strong><br><br>
@@ -190,7 +198,36 @@ Você abre no app: [Descriptografado automaticamente]
         <li>Conforme a política do OpenAI, áudios não são retidos após transcrição</li>
     </ul>
 
-    ---
+    <h3>Análise de Uso e Relatórios de Falha (Firebase)</h3>
+
+    <div class="info">
+        <strong>ℹ️ Para melhorar o app, nunca para identificar você.</strong><br><br>
+        Usamos o <strong>Firebase Analytics</strong> e o <strong>Firebase Crashlytics</strong> (Google) para entender quais recursos são usados e corrigir erros.
+        <br><br>
+        <strong>O que é coletado:</strong>
+        <ul>
+            <li><strong>Eventos de uso:</strong> cadastro, login, onboarding concluído, memória criada (com o tipo: texto, áudio, foto), uso do chat IA, tela de planos aberta, compra iniciada, concluída ou restaurada. Esses eventos não carregam texto livre.</li>
+            <li><strong>Como conheceu o app:</strong> apenas a categoria escolhida entre opções fixas (indicação, redes sociais, busca no Google, loja de apps, outro).</li>
+            <li><strong>Eventos automáticos do Firebase:</strong> primeira abertura, início de sessão, tempo de uso, atualização e remoção do app, origem da instalação na Google Play.</li>
+            <li><strong>Dados técnicos:</strong> identificador de instância do app, modelo do aparelho, versão do Android e do app, idioma, e país ou região aproximada (derivada do IP).</li>
+            <li><strong>Falhas do app:</strong> tipo do erro, local do código onde ocorreu (stack trace), modelo do aparelho, sistema, memória e espaço livres, versão do app e identificador de instalação.</li>
+        </ul>
+
+        <strong>O que NÃO é coletado:</strong>
+        <ul>
+            <li>❌ Conteúdo de memórias, textos, áudios, fotos, perguntas ou respostas do chat</li>
+            <li>❌ Nome, email, data de nascimento ou objetivo pessoal</li>
+            <li>❌ Mensagens de erro (podem conter texto do usuário, por isso só enviamos o tipo do erro)</li>
+            <li>❌ ID de publicidade e Google Signals (sem dados demográficos ou de anúncios)</li>
+            <li>❌ Identificador de usuário: os dados não são vinculados à sua conta</li>
+        </ul>
+
+        <strong>Como desativar:</strong> abra o menu do app → <strong>Privacidade</strong> → desligue a chave <strong>"Análise de uso e relatórios de falha"</strong>. Ao desligar, a coleta é interrompida, relatórios de falha ainda não enviados são apagados e o identificador de instância do Analytics é removido. A escolha vale apenas neste aparelho: ao reinstalar o app ou trocar de aparelho, a chave volta ao padrão (ligada).
+        <br><br>
+        Saiba mais na <a href="https://firebase.google.com/support/privacy" target="_blank">Política de Privacidade do Firebase</a>.
+    </div>
+
+    <hr>
 
     <h2>5. Com Quem Compartilhamos Dados</h2>
 
@@ -222,22 +259,28 @@ Você abre no app: [Descriptografado automaticamente]
             <td><a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy</a></td>
         </tr>
         <tr>
-            <td><strong>Google Play Services</strong></td>
-            <td>Device ID, notificações</td>
-            <td>Notificações push, analytics</td>
+            <td><strong>Firebase Analytics e Crashlytics</strong> (Google)</td>
+            <td>Eventos de uso sem conteúdo pessoal, dados técnicos do aparelho e relatórios de falha</td>
+            <td>Entender o uso e corrigir erros (pode ser desativado)</td>
+            <td><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a></td>
+        </tr>
+        <tr>
+            <td><strong>Google Play</strong></td>
+            <td>Dados da compra e da instalação</td>
+            <td>Distribuição do app e cobrança da assinatura</td>
             <td><a href="https://policies.google.com/privacy" target="_blank">Google Privacy</a></td>
         </tr>
     </table>
 
     <h3>O Que NÃO Compartilhamos:</h3>
     <ul>
-        <li>❌ Sua chave privada (NUNCA sai do seu dispositivo)</li>
+        <li>❌ Sua chave privada em texto aberto</li>
         <li>❌ Dados descriptografados com publicidades</li>
         <li>❌ Informações de contatos ou agenda</li>
         <li>❌ Dados com brokers de dados ou vendedores de leads</li>
     </ul>
 
-    ---
+    <hr>
 
     <h2>6. Código de Recuperação</h2>
 
@@ -260,7 +303,7 @@ Você abre no app: [Descriptografado automaticamente]
 
     <p><strong>Se você perdeu:</strong> Acesse a tela de recuperação → "Tenho um código de recuperação" → use-o. Se perdeu o código E a senha, você pode "Começar do zero" (apagará as memórias antigas), mas poderá criar uma nova conta.</p>
 
-    ---
+    <hr>
 
     <h2>7. Mídia Legada (Fotos/Áudios Antigos)</h2>
 
@@ -276,7 +319,7 @@ Você abre no app: [Descriptografado automaticamente]
         Se notar uma pausa na primeira vez que abre "Acervo", isso é o processo de cifragem de mídia legada.
     </div>
 
-    ---
+    <hr>
 
     <h2>8. Seus Direitos (GDPR, CCPA, LGPD)</h2>
 
@@ -291,19 +334,20 @@ Você abre no app: [Descriptografado automaticamente]
                 <li>Informações de perfil</li>
                 <li>Histórico de atividade</li>
             </ul>
-            Isso leva até 30 dias para ser completamente removido do servidor (retenção padrão Supabase).
+            Isso leva até 30 dias para ser completamente removido do servidor (retenção padrão Supabase). Como os dados de análise de uso e falhas não são vinculados à sua conta, eles não são removidos individualmente e expiram conforme os prazos da seção 10.
         </li>
         <li><strong>✅ Portabilidade:</strong> Se quiser seus dados em outro formato, entre em contato.</li>
         <li><strong>✅ Revogar consentimento:</strong> Você pode a qualquer momento:
             <ul>
                 <li>Desativar notificações (Configurações → Notificações)</li>
+                <li>Desativar a análise de uso e os relatórios de falha (Menu → Privacidade)</li>
                 <li>Cancelar assinatura premium</li>
                 <li>Excluir sua conta</li>
             </ul>
         </li>
     </ul>
 
-    ---
+    <hr>
 
     <h2>9. Proteção de Crianças</h2>
 
@@ -311,7 +355,7 @@ Você abre no app: [Descriptografado automaticamente]
 
     <p>Se você é responsável por uma criança e acha que uma conta foi criada sem consentimento, entre em contato para remover.</p>
 
-    ---
+    <hr>
 
     <h2>10. Retenção de Dados</h2>
 
@@ -319,20 +363,22 @@ Você abre no app: [Descriptografado automaticamente]
         <li><strong>Suas memórias:</strong> Armazenadas enquanto você mantiver a conta</li>
         <li><strong>Backup da chave privada:</strong> Armazenado enquanto você mantiver a conta</li>
         <li><strong>Atividade/logs:</strong> Mantidos por 30 dias</li>
+        <li><strong>Dados de análise de uso (Firebase Analytics):</strong> Mantidos por até 2 meses</li>
+        <li><strong>Relatórios de falha (Firebase Crashlytics):</strong> Mantidos por até 90 dias</li>
         <li><strong>Dados após deleção:</strong> Até 30 dias (retenção padrão Supabase)</li>
     </ul>
 
     <p>Após exclusão de conta, seus dados são permanentemente removidos do nosso controle.</p>
 
-    ---
+    <hr>
 
     <h2>11. Mudanças Nesta Política</h2>
 
     <p>Podemos atualizar esta política de privacidade. Notificaremos você de mudanças importantes via email ou no app. Mudanças pequenas (correções, esclarecimentos) podem ser atualizadas sem aviso.</p>
 
-    <p><strong>Última atualização:</strong> Setembro de 2026</p>
+    <p><strong>Última atualização:</strong> Outubro de 2026</p>
 
-    ---
+    <hr>
 
     <h2>12. Contato</h2>
 
@@ -344,12 +390,10 @@ Você abre no app: [Descriptografado automaticamente]
 
     <p>Responderemos em até 7 dias úteis.</p>
 
-    ---
-
     <div class="footer">
-        <p><strong>MagonTech — Desenvolvedor do Elos Memory</strong></p>
+        <p><strong>MagonTech - Desenvolvedor do Elos Memory</strong></p>
         <p>Elos Memory é um produto desenvolvido com foco em privacidade e segurança. Seus dados são seus.</p>
-        <p style="margin-top: 20px;"><em>Última atualização: Setembro de 2026</em></p>
+        <p style="margin-top: 20px;"><em>Última atualização: Outubro de 2026</em></p>
     </div>
 
 </body>
